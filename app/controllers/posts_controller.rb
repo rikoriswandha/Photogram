@@ -14,17 +14,25 @@ class PostsController < ApplicationController
 
   def create
     if @post = Post.create(post_params)
+      flash[:success] = "Your post has been created!"
       redirect_to posts_path
     else
+      flash.now[:alert] = "Your new post couldn't be created! Please check the form."
       render :new
+    end
   end
 
   def edit
   end
 
   def update
-    @post.update(post_params)
-    redirect_to(post_path(@post))
+    if @post.update(post_params)
+      flash[:success] = "Post updated."
+      redirect_to(post_path(@post))
+    else
+      flash.now[:alert] = "Update failed. Please check the form."
+      render :edit
+    end
   end
 
   def destroy
@@ -33,7 +41,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def post_params
     params.require(:post).permit(:image, :caption)
   end
@@ -43,4 +51,3 @@ class PostsController < ApplicationController
   end
 
 end
-  
