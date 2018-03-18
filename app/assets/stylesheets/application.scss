@@ -20,12 +20,48 @@ html {
   height: 100%;
 }
 
+.registration-bg {
+  padding-top: 4em;
+  height: 95vh;
+  background-image: image-url('regbackg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.log-in{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: none;
+}
+
+.panel {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.panel-heading {
+  h2 {
+    text-align: center;
+  }
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 /* ## NAVBAR CUSTOMISATIONS ## */
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.alert {
+  margin-bottom: 0px;
+}
 
 .navbar-brand {
   a {
@@ -45,6 +81,30 @@ body {
   width: 70%;
   margin: 0 auto;
 }
+
+/* ## FORM CUSTOMISATIONS ## */
+
+.simple_form div.input {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  clear: both; /* Required for Webkit, but not for Gecko */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.input-lg {
+  width: 100%;
+}
+
+input.btn {
+  margin-top: 10px;
+}
+
+span.error {
+  display: inline-block;
+  color: #a94442
+}
+
 
 /* ## POST CUSTOMISATIONS ## */
 
