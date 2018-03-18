@@ -185,7 +185,6 @@ span.error {
   }
   .user-name {
     font-weight: 500;
-    margin-right: 0.3em;
     color: #125688;
     font-size: 15px;
   }
@@ -287,6 +286,11 @@ span.error {
   margin: 20px auto;
 }
 
+.comment-submit-button {
+  position: absolute;
+  left: -9999px;
+}
+
 .profile-header {
   padding: 20px 0;
 }
@@ -315,7 +319,17 @@ span.error {
   margin-top: 20px;
 }
 
-textarea#user_bio {
+#user_bio {
   width: 100%;
   padding : 7px;
+}
+
+#user_avatar {
+  padding: 1em;
+  margin: 0px auto;
+}
+
+.likes {
+  margin-top: 20px;
+  margin-bottom: 7px;
 }
