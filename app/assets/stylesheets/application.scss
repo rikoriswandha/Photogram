@@ -37,6 +37,16 @@ html {
   border: none;
 }
 
+.login-bg {
+  padding-top: 4em;
+  height: 95vh;
+  background-image: image-url('loginbg.jpg');
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .panel {
   border-radius: 8px;
   width: 100%;
