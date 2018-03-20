@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_voter
   validates :user_name, presence: true, length: { minimum: 4, maximum: 16 }, format: { with: /\A[a-zA-Z0-9]+\Z/, message: 'only letters and numbers allowed' }
   validates_uniqueness_of :user_name, message: 'username has already taken'
   validates_uniqueness_of :email, message: 'email has already registered'
